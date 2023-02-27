@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'com.ertu_.myhome'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.ertu_.myhome"
