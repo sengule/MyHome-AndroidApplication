@@ -2,11 +2,13 @@ package com.ertu_.myhome.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import com.ertu_.myhome.R;
+import com.ertu_.myhome.home.HomeActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,5 +27,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
         startActivity(intent);
     }
+
+    public void reload(Context context){
+        Intent intent = new Intent(context, HomeActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
 
 }

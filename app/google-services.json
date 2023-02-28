@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "442105133521",
+    "project_id": "my-home-application-c5574",
+    "storage_bucket": "my-home-application-c5574.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:442105133521:android:b2d2db415dff66153d08f0",
+        "android_client_info": {
+          "package_name": "com.ertu_.myhome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "442105133521-njq4gfdp9ec2e5pn51glgasbme195e5e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ertu_.myhome",
+            "certificate_hash": "f1093482794ed74d014a48e23b6bed1c11a0ab24"
+          }
+        },
+        {
+          "client_id": "442105133521-3chqpmua5o7nelvb5ogcr0vhrgk3tuef.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0SJ2CGmUKnRbpZxTKjpmxE9RCgexoUuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "442105133521-3chqpmua5o7nelvb5ogcr0vhrgk3tuef.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
