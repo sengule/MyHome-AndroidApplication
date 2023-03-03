@@ -29,13 +29,12 @@ public class GoogleSignInLogin extends MainActivity {
     private static final int RC_SIGN_IN = 123;
 
     GoogleSignInClient mGoogleSignInClient;
-    private FirebaseAuth mAuth;
-    private FirebaseUser mUser;
+    FirebaseAuth mAuth;
+    FirebaseUser mUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_google_sign_in);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -44,7 +43,6 @@ public class GoogleSignInLogin extends MainActivity {
 
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
-
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
@@ -57,15 +55,17 @@ public class GoogleSignInLogin extends MainActivity {
         // Result returned from launching the Intent from GoogleSignInApi.getSignInIntent(...);
         if (requestCode == RC_SIGN_IN) {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+
             try {
                 // Google Sign In was successful, authenticate with Firebase
-                GoogleSignInAccount account = task.getResult(ApiException.class);
+                GoogleSignInAccount account = task.getResult();
                 firebaseAuthWithGoogle(account.getIdToken());
-            } catch (ApiException e) {
+            } catch (Exception e) {
                 // Google Sign In failed, update UI appropriately
                 Toast.makeText(GoogleSignInLogin.this, e.getLocalizedMessage(),Toast.LENGTH_LONG).show();
                 finish();
             }
+
         }
     }
 
